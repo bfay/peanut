@@ -264,6 +264,75 @@ if ($jwl_equation_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_a
 if ($jwl_equation_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_equation"); }
 }
 
+function tinymce_add_button_encode($buttons) { 
+$options = get_option('jwl_options_group1');
+$jwl_encode = isset($options['jwl_encode_field_id']); 
+if ($jwl_encode == "1") $buttons[] = 'encode,decode'; return $buttons; } 
+$options2 = get_option('jwl_options_group1');
+if (isset($options2['jwl_encode_dropdown']['row'])) {
+$jwl_encode_dropdown2 = $options2['jwl_encode_dropdown']['row'];
+if ($jwl_encode_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_encode"); } 
+if ($jwl_encode_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_encode"); } 
+if ($jwl_encode_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_encode"); }
+if ($jwl_encode_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_encode"); }
+}
+
+function tinymce_add_button_directionality($buttons) { 
+$options = get_option('jwl_options_group1');
+$jwl_directionality = isset($options['jwl_directionality_field_id']); 
+if ($jwl_directionality == "1") $buttons[] = 'ltr,rtl'; return $buttons; } 
+$options2 = get_option('jwl_options_group1');
+if (isset($options2['jwl_directionality_dropdown']['row'])) {
+$jwl_directionality_dropdown2 = $options2['jwl_directionality_dropdown']['row'];
+if ($jwl_directionality_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_directionality"); } 
+if ($jwl_directionality_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_directionality"); } 
+if ($jwl_directionality_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_directionality"); }
+if ($jwl_directionality_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_directionality"); }
+}
+
+function tinymce_add_button_ezimage($buttons) { 
+$options = get_option('jwl_options_group1');
+$jwl_ezimage = isset($options['jwl_ezimage_field_id']); 
+if ($jwl_ezimage == "1") $buttons[] = 'ezimage'; return $buttons; } 
+$options2 = get_option('jwl_options_group1');
+if (isset($options2['jwl_ezimage_dropdown']['row'])) {
+$jwl_ezimage_dropdown2 = $options2['jwl_ezimage_dropdown']['row'];
+if ($jwl_ezimage_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_ezimage"); } 
+if ($jwl_ezimage_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_ezimage"); } 
+if ($jwl_ezimage_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_ezimage"); }
+if ($jwl_ezimage_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_ezimage"); }
+}
+
+function tinymce_add_button_ptags($buttons) { 
+$options = get_option('jwl_options_group1');
+$jwl_ptags = isset($options['jwl_ptags_field_id']); 
+if ($jwl_ptags == "1") $buttons[] = 'ptags'; return $buttons; } 
+$options2 = get_option('jwl_options_group1');
+if (isset($options2['jwl_ptags_dropdown']['row'])) {
+$jwl_ptags_dropdown2 = $options2['jwl_ptags_dropdown']['row'];
+if ($jwl_ptags_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_ptags"); } 
+if ($jwl_ptags_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_ptags"); } 
+if ($jwl_ptags_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_ptags"); }
+if ($jwl_ptags_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_ptags"); }
+}
+
+function tinymce_add_button_linebreak($buttons) { 
+$options = get_option('jwl_options_group1');
+$jwl_linebreak = isset($options['jwl_mcelinebreak_field_id']); 
+if ($jwl_linebreak == "1") $buttons[] = 'linebreak'; return $buttons; } 
+$options2 = get_option('jwl_options_group1');
+if (isset($options2['jwl_mcelinebreak_dropdown']['row'])) {
+$jwl_linebreak_dropdown2 = $options2['jwl_mcelinebreak_dropdown']['row'];
+if ($jwl_linebreak_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_linebreak"); } 
+if ($jwl_linebreak_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_linebreak"); } 
+if ($jwl_linebreak_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_linebreak"); }
+if ($jwl_linebreak_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_linebreak"); }
+}
+
+// ***********************
+//
+//
+//
 // Functions for Row 4
 function tinymce_add_button_styleselect($buttons) { 
 $options = get_option('jwl_options_group2');
@@ -577,57 +646,168 @@ if ($jwl_w3cvalidate_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymc
 if ($jwl_w3cvalidate_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_w3cvalidate"); }
 }
 
-// Functions for Other Plugin Buttons
-function tinymce_add_button_wp_photo_album($buttons) { 
-$options = get_option('jwl_options_group9');
-$jwl_wp_photo_album = isset($options['jwl_wp_photo_album_field_id']); 
-if ($jwl_wp_photo_album == "1") $buttons[] = 'mygallery_button'; return $buttons; } 
-$options2 = get_option('jwl_options_group9');
-if (isset($options2['jwl_wp_photo_album_dropdown']['row'])) {
-$jwl_wp_photo_album_dropdown2 = $options2['jwl_wp_photo_album_dropdown']['row'];
-if ($jwl_wp_photo_album_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_wp_photo_album"); } 
-if ($jwl_wp_photo_album_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_wp_photo_album"); } 
-if ($jwl_wp_photo_album_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_wp_photo_album"); }
-if ($jwl_wp_photo_album_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_wp_photo_album"); }
+function tinymce_add_button_clker($buttons) { 
+$options = get_option('jwl_options_group2');
+$jwl_clker = isset($options['jwl_clker_field_id']); 
+if ($jwl_clker == "1") $buttons[] = 'clker'; return $buttons; } 
+$options2 = get_option('jwl_options_group2');
+if (isset($options2['jwl_clker_dropdown']['row'])) {
+$jwl_clker_dropdown2 = $options2['jwl_clker_dropdown']['row'];
+if ($jwl_clker_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_clker"); } 
+if ($jwl_clker_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_clker"); } 
+if ($jwl_clker_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_clker"); }
+if ($jwl_clker_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_clker"); }
 }
 
+function tinymce_add_button_acheck($buttons) { 
+$options = get_option('jwl_options_group2');
+$jwl_acheck = isset($options['jwl_acheck_field_id']); 
+if ($jwl_acheck == "1") $buttons[] = 'acheck'; return $buttons; } 
+$options2 = get_option('jwl_options_group2');
+if (isset($options2['jwl_acheck_dropdown']['row'])) {
+$jwl_acheck_dropdown2 = $options2['jwl_acheck_dropdown']['row'];
+if ($jwl_acheck_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_acheck"); } 
+if ($jwl_acheck_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_acheck"); } 
+if ($jwl_acheck_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_acheck"); }
+if ($jwl_acheck_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_acheck"); }
+}
+
+function tinymce_add_button_advlink($buttons) { 
+$options = get_option('jwl_options_group2');
+$jwl_advlink = isset($options['jwl_advlink_field_id']); 
+if ($jwl_advlink == "1") $buttons[] = 'advlink'; return $buttons; } 
+$options2 = get_option('jwl_options_group2');
+if (isset($options2['jwl_advlink_dropdown']['row'])) {
+$jwl_advlink_dropdown2 = $options2['jwl_advlink_dropdown']['row'];
+if ($jwl_advlink_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_advlink"); } 
+if ($jwl_advlink_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_advlink"); } 
+if ($jwl_advlink_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_advlink"); }
+if ($jwl_advlink_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_advlink"); }
+}
+
+function tinymce_add_button_div($buttons) { 
+$options = get_option('jwl_options_group2');
+$jwl_div = isset($options['jwl_div_field_id']); 
+if ($jwl_div == "1") $buttons[] = 'clearleft,clearright,clearboth'; return $buttons; } 
+$options2 = get_option('jwl_options_group2');
+if (isset($options2['jwl_div_dropdown']['row'])) {
+$jwl_div_dropdown2 = $options2['jwl_div_dropdown']['row'];
+if ($jwl_div_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_div"); } 
+if ($jwl_div_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_div"); } 
+if ($jwl_div_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_div"); }
+if ($jwl_div_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_div"); }
+}
+
+function tinymce_add_button_nextpage($buttons) { 
+$options = get_option('jwl_options_group2');
+$jwl_nextpage = isset($options['jwl_nextpage_field_id']); 
+if ($jwl_nextpage == "1") $buttons[] = 'wp_page'; return $buttons; } 
+$options2 = get_option('jwl_options_group2');
+if (isset($options2['jwl_nextpage_dropdown']['row'])) {
+$jwl_nextpage_dropdown2 = $options2['jwl_nextpage_dropdown']['row'];
+if ($jwl_nextpage_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_nextpage"); } 
+if ($jwl_nextpage_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_nextpage"); } 
+if ($jwl_nextpage_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_nextpage"); }
+if ($jwl_nextpage_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_nextpage"); }
+}
+
+// ******************************************************
+//
+//
+// Functions for Other Plugin Buttons
+// Function used to check if a plugin is active or not.
+function jwl_is_plugin_active( $plugin ) {
+    return in_array( $plugin, (array) get_option( 'active_plugins', array() ) );
+}
+
+if (jwl_is_plugin_active('wp-photo-album-plus/wppa.php')) {
+	function tinymce_add_button_wp_photo_album($buttons) { 
+	$options = get_option('jwl_options_group9');
+	$jwl_wp_photo_album = isset($options['jwl_wp_photo_album_field_id']); 
+	if ($jwl_wp_photo_album == "1") $buttons[] = 'mygallery_button'; return $buttons; } 
+	$options2 = get_option('jwl_options_group9');
+	if (isset($options2['jwl_wp_photo_album_dropdown']['row'])) {
+	$jwl_wp_photo_album_dropdown2 = $options2['jwl_wp_photo_album_dropdown']['row'];
+	if ($jwl_wp_photo_album_dropdown2 == 'Row 1') { add_filter("mce_buttons", "tinymce_add_button_wp_photo_album"); } 
+	if ($jwl_wp_photo_album_dropdown2 == 'Row 2') { add_filter("mce_buttons_2", "tinymce_add_button_wp_photo_album"); } 
+	if ($jwl_wp_photo_album_dropdown2 == 'Row 3') { add_filter("mce_buttons_3", "tinymce_add_button_wp_photo_album"); }
+	if ($jwl_wp_photo_album_dropdown2 == 'Row 4') { add_filter("mce_buttons_4", "tinymce_add_button_wp_photo_album"); }
+	}
+}
+
+
+
+// ******************************************************
+//
+//
+// Functions for FullScreen Buttons
+/*
+if ( !function_exists('jwl_fullscreen_buttons') )
+{
+	function jwl_fullscreen_buttons($buttons)
+	{
+	// add a separator
+	//$buttons[] = 'separator';
+	// format: title, onclick, show in both editors
+	$buttons['shortcodes'] = array(
+	// Title of the button
+	'title' => __('Shortcodes'),
+	// Command to execute
+	'onclick' => "tinyMCE.execCommand('mceShortcodes');",
+	// Show on visual AND html mode
+	'both' => false
+	);
+	return $buttons;
+	}
+	add_filter( 'wp_fullscreen_buttons', 'jwl_fullscreen_buttons' );
+}
+*/
+
 // Test button
-//function tinymce_add_test_button($buttons) {  $buttons[] = 'tagwrap';  return $buttons;  }
-//add_filter("mce_buttons", "tinymce_add_test_button");
+//function tinymce_add_test_button($buttons) {  $buttons[] = 'codehighlight';  return $buttons;  }
+//add_filter("mce_buttons_3", "tinymce_add_test_button");
 
 // Add the plugin array for extra features
 function jwl_mce_external_plugins( $jwl_plugin_array ) {
-		$jwl_plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'table/editor_plugin.js';
-		$jwl_plugin_array['emotions'] = plugin_dir_url(__FILE__) . 'emotions/editor_plugin.js';
-		$jwl_plugin_array['advlist'] = plugin_dir_url(__FILE__) . 'advlist/editor_plugin.js';
-		$jwl_plugin_array['advimage'] = plugin_dir_url(__FILE__) . 'advimage/editor_plugin.js';
-		$jwl_plugin_array['searchreplace'] = plugin_dir_url(__FILE__) . 'searchreplace/editor_plugin.js';
-		$jwl_plugin_array['preview'] = plugin_dir_url(__FILE__) . 'preview/editor_plugin.js';
-		$jwl_plugin_array['xhtmlxtras'] = plugin_dir_url(__FILE__) . 'xhtmlxtras/editor_plugin.js';
-		$jwl_plugin_array['style'] = plugin_dir_url(__FILE__) . 'style/editor_plugin.js';
-		$jwl_plugin_array['media'] = plugin_dir_url(__FILE__) . 'media/editor_plugin.js';
-		$jwl_plugin_array['advhr'] = plugin_dir_url(__FILE__) . 'advhr/editor_plugin.js';
-		$jwl_plugin_array['clear'] = plugin_dir_url( __FILE__ ) . 'clear/editor_plugin.js';
-		$jwl_plugin_array['tableDropdown'] = plugin_dir_url( __FILE__ ) . 'tableDropdown/editor_plugin.js';
-		$jwl_plugin_array['codemagic'] = plugin_dir_url( __FILE__ ) . 'codemagic/editor_plugin.js';
-		$jwl_plugin_array['youtube'] = plugin_dir_url( __FILE__ ) . 'youtube/editor_plugin.js';
-		$jwl_plugin_array['imgmap'] = plugin_dir_url( __FILE__ ) . 'imgmap/editor_plugin.js';
-		$jwl_plugin_array['visualchars'] = plugin_dir_url( __FILE__ ) . 'visualchars/editor_plugin.js';
-		$jwl_plugin_array['print'] = plugin_dir_url( __FILE__ ) . 'print/editor_plugin.js';
-		$jwl_plugin_array['insertdatetime'] = plugin_dir_url( __FILE__ ) . 'insertdatetime/editor_plugin.js';
-		$jwl_plugin_array['nonbreaking'] = plugin_dir_url( __FILE__ ) . 'nonbreaking/editor_plugin.js';
-		$jwl_plugin_array['mailto'] = plugin_dir_url( __FILE__ ) . 'mailto/editor_plugin_src.js';
-		$jwl_plugin_array['layer'] = plugin_dir_url( __FILE__ ) . 'layer/editor_plugin_src.js';
-		$jwl_plugin_array['jwlspan']  =  plugin_dir_url( __FILE__ ) . 'jwl_span/jwl_span.js';
-		$jwl_plugin_array['youtubeIframe']  =  plugin_dir_url( __FILE__ ) . 'youtubeIframe/editor_plugin.js';	
-		$jwl_plugin_array['equation']  =  plugin_dir_url( __FILE__ ) . 'equation/editor_plugin.js';
-		$jwl_plugin_array['shortcodes'] = plugin_dir_url(__FILE__) . 'shortcodes/editor_plugin_src.js';
-		$jwl_plugin_array['loremipsum'] = plugin_dir_url(__FILE__) . 'loremipsum/editor_plugin.js';
-		$jwl_plugin_array['w3cvalidate'] = plugin_dir_url(__FILE__) . 'w3cvalidate/editor_plugin.js';
-		$jwl_plugin_array['tagwrap'] = plugin_dir_url(__FILE__) . 'tagwrap/editor_plugin_src.js';
+		$jwl_plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'addons/table/editor_plugin.js';
+		$jwl_plugin_array['emotions'] = plugin_dir_url(__FILE__) . 'addons/emotions/editor_plugin.js';
+		$jwl_plugin_array['advlist'] = plugin_dir_url(__FILE__) . 'addons/advlist/editor_plugin.js';
+		$jwl_plugin_array['advimage'] = plugin_dir_url(__FILE__) . 'addons/advimage/editor_plugin.js';
+		$jwl_plugin_array['searchreplace'] = plugin_dir_url(__FILE__) . 'addons/searchreplace/editor_plugin.js';
+		$jwl_plugin_array['preview'] = plugin_dir_url(__FILE__) . 'addons/preview/editor_plugin.js';
+		$jwl_plugin_array['xhtmlxtras'] = plugin_dir_url(__FILE__) . 'addons/xhtmlxtras/editor_plugin.js';
+		$jwl_plugin_array['style'] = plugin_dir_url(__FILE__) . 'addons/style/editor_plugin.js';
+		$jwl_plugin_array['media'] = plugin_dir_url(__FILE__) . 'addons/media/editor_plugin.js';
+		$jwl_plugin_array['advhr'] = plugin_dir_url(__FILE__) . 'addons/advhr/editor_plugin.js';
+		$jwl_plugin_array['clear'] = plugin_dir_url( __FILE__ ) . 'addons/clear/editor_plugin.js';
+		$jwl_plugin_array['tableDropdown'] = plugin_dir_url( __FILE__ ) . 'addons/tableDropdown/editor_plugin.js';
+		$jwl_plugin_array['codemagic'] = plugin_dir_url( __FILE__ ) . 'addons/codemagic/editor_plugin.js';
+		$jwl_plugin_array['youtube'] = plugin_dir_url( __FILE__ ) . 'addons/youtube/editor_plugin.js';
+		$jwl_plugin_array['imgmap'] = plugin_dir_url( __FILE__ ) . 'addons/imgmap/editor_plugin.js';
+		$jwl_plugin_array['visualchars'] = plugin_dir_url( __FILE__ ) . 'addons/visualchars/editor_plugin.js';
+		$jwl_plugin_array['print'] = plugin_dir_url( __FILE__ ) . 'addons/print/editor_plugin.js';
+		$jwl_plugin_array['insertdatetime'] = plugin_dir_url( __FILE__ ) . 'addons/insertdatetime/editor_plugin.js';
+		$jwl_plugin_array['nonbreaking'] = plugin_dir_url( __FILE__ ) . 'addons/nonbreaking/editor_plugin.js';
+		$jwl_plugin_array['mailto'] = plugin_dir_url( __FILE__ ) . 'addons/mailto/editor_plugin_src.js';
+		$jwl_plugin_array['layer'] = plugin_dir_url( __FILE__ ) . 'addons/layer/editor_plugin_src.js';
+		$jwl_plugin_array['jwlspan']  =  plugin_dir_url( __FILE__ ) . 'addons/jwl_span/jwl_span.js';
+		$jwl_plugin_array['youtubeIframe']  =  plugin_dir_url( __FILE__ ) . 'addons/youtubeIframe/editor_plugin.js';	
+		$jwl_plugin_array['equation']  =  plugin_dir_url( __FILE__ ) . 'addons/equation/editor_plugin.js';
+		$jwl_plugin_array['shortcodes'] = plugin_dir_url(__FILE__) . 'addons/shortcodes/editor_plugin_src.js';
+		$jwl_plugin_array['loremipsum'] = plugin_dir_url(__FILE__) . 'addons/loremipsum/editor_plugin.js';
+		$jwl_plugin_array['w3cvalidate'] = plugin_dir_url(__FILE__) . 'addons/w3cvalidate/editor_plugin.js';
+		$jwl_plugin_array['tagwrap'] = plugin_dir_url(__FILE__) . 'addons/tagwrap/editor_plugin_src.js';
+		$jwl_plugin_array['encode'] = plugin_dir_url(__FILE__) . 'addons/encode/editor_plugin_src.js';
+		$jwl_plugin_array['clker'] = plugin_dir_url(__FILE__) . 'addons/clker/editor_plugin.js';
+		$jwl_plugin_array['acheck'] = plugin_dir_url(__FILE__) . 'addons/acheck/editor_plugin.js';
+		$jwl_plugin_array['directionality'] = plugin_dir_url(__FILE__) . 'addons/directionality/editor_plugin.js';
+		$jwl_plugin_array['ezimage'] = plugin_dir_url(__FILE__) . 'addons/ezimage/editor_plugin.js';
+		$jwl_plugin_array['ptags'] = plugin_dir_url(__FILE__) . 'addons/ptags/editor_plugin.js';
+		$jwl_plugin_array['linebreak'] = plugin_dir_url(__FILE__) . 'addons/linebreak/editor_plugin.js';
+		$jwl_plugin_array['advlink'] = plugin_dir_url(__FILE__) . 'addons/advlink/editor_plugin.js';
 		
 		// Test plugin array
-		//$jwl_plugin_array['tagwrap'] = plugin_dir_url(__FILE__) . 'tagwrap/editor_plugin_src.js';
+		//$jwl_plugin_array['codehighlight'] = plugin_dir_url(__FILE__) . 'addons/codehighlight/editor_plugin.js';
 		   
 		return $jwl_plugin_array;
 }
@@ -662,6 +842,7 @@ if ($jwl_tinymce_refresh == "1"){
 $options4 = get_option('jwl_options_group3');
 
 // Function for NextPage Feature
+/*
 $jwl_tinymce_nextpage = isset($options4['jwl_tinymce_nextpage_field_id']);
 if ($jwl_tinymce_nextpage == "1"){
     add_filter('mce_buttons','jwl_nextpage_button');
@@ -675,6 +856,7 @@ if ($jwl_tinymce_nextpage == "1"){
     return $mce_buttons;
     }
 }
+*/
 
 // Function to show post/page id in admin column area
 $jwl_postid = isset($options4['jwl_postid_field_id']);
@@ -769,6 +951,7 @@ if ($jwl_linebreak == "1"){
 }
 
 // Add button and array for advanced insert/edit link button.
+/*
 $jwl_defaults = isset($options4['jwl_defaults_field_id']);
 if ($jwl_defaults == "1") {
 	
@@ -797,21 +980,32 @@ if ($jwl_defaults == "1") {
 	}
 	add_filter('mce_buttons','jwl_advlink_button');
 }
+*/
 
 // User option for adding the clear div buttons in the visual editor
+/*
 function tinymce_add_button_div($buttons) {
 $options = get_option('jwl_options_group3');
 $jwl_div = isset($options['jwl_div_field_id']);
 if ($jwl_div == "1")
-array_push($buttons, "separator", "clearleft","clearright","clearboth","advlink");
+array_push($buttons, "separator", "clearleft","clearright","clearboth");
    return $buttons;
 }
 add_filter('mce_buttons', 'tinymce_add_button_div');
+*/
 
 // Function to remove wpautop
 $jwl_autop = isset($options4['jwl_autop_field_id']);
 if ($jwl_autop == "1"){
 	remove_filter ('the_content', 'wpautop');
+	remove_filter ('the_content', 'wptexturize');
+	
+	function jwl_remove_wpautop_tinymce($remove_Tiny) {
+		$remove_Tiny['wpautop'] = false;
+		
+		return $remove_Tiny;
+	}
+	add_filter('tiny_mce_before_init','jwl_remove_wpautop_tinymce');
 }
 
 // User option for adding a signoff shortcode for tinymce visual editor (Goes with custom message box below)
@@ -888,11 +1082,9 @@ if ($jwl_columns == "1"){
 // Class and Functions for Cursor Position in Editor
 $jwl_cursor = isset($options4['jwl_cursor_field_id']);
 if ($jwl_cursor == "1") {
-	
 	global $pagenow;
-	if ($pagenow != "widgets.php") {
-		global $pagenow;
-		if (($pagenow != "admin.php") && (isset($_GET['page']) == 'cleverness-to-do-list')) {
+	// Make sure we only add to posts, pages, or custom post types
+	if( strstr($_SERVER['REQUEST_URI'], 'wp-admin/post-new.php') || strstr($_SERVER['REQUEST_URI'], 'wp-admin/post.php') ) {
 		
 			final class Preserve_Editor_Scroll_Position {
 			
@@ -942,11 +1134,10 @@ if ($jwl_cursor == "1") {
 				} );
 			};
 			</script>
-				<?php
+			<?php
 			}
 			}
 			add_action( 'admin_init', array( 'Preserve_Editor_Scroll_Position', 'init' ) );
-		}
 	}
 }
 
@@ -976,5 +1167,85 @@ if ($jwl_tinymce_excerpt == "1") {
 		wp_editor($post_tinymce_excerpt,$id,$settings);
 	}
 }
+
+// Functions to load stylesheet from front-end of website into ultimate tinymce content editor.
+$options10 = get_option('jwl_options_group4');
+$jwl_style = isset($options10['jwl_tinymce_add_stylesheet']);
+
+if ($jwl_style == "1") {
+	
+	function jwl_add_stylesheet($jwl_style_init) {
+		
+		$style_uri = get_stylesheet_directory_uri().'/editor-style.css';
+		
+		if (empty($jwl_style_init['content_css'])) {
+			$jwl_style_init['content_css'] = $style_uri;
+		} else {
+			$jwl_style_init['content_css'] = ','.$style_uri;
+		}
+		
+		return $jwl_style_init;
+	}
+	add_filter('tiny_mce_before_init', 'jwl_add_stylesheet');
+}
+
+// Functions for tinymce overrides
+$option_tmce_overrides = get_option('jwl_options_group8');
+if (isset($option_tmce_overrides['jwl_tinymce_modifications'])) {
+	function jwl_modify_tmce ($jwl_tmce_modifications) {
+		
+		$my_var = WP_PLUGIN_DIR."/ultimate-tinymce/css/mce_modify.css";
+		
+		$jwl_mce_background_color = get_option('jwl_options_group8');
+		$jwl_mce_background_color2 = $jwl_mce_background_color['jwl_tinymce_background_color_hex'];
+		
+		$jwl_mce_font_color = get_option('jwl_options_group8');
+		$jwl_mce_font_color2 = $jwl_mce_font_color['jwl_tinymce_font_color_hex'];
+		
+		$jwl_mce_fontsize = get_option('jwl_options_group8');
+		$jwl_mce_fontsize2 = $jwl_mce_fontsize['jwl_tinymce_fontsize'];
+
+		$p=".mceContentBody {background-color:".$jwl_mce_background_color2." !important; color:".$jwl_mce_font_color2." !important;}\np {font-size:".$jwl_mce_fontsize2." !important;}\n";
+		$a = fopen($my_var, 'w');
+		fwrite($a, $p);
+		fclose($a);
+		chmod($my_var, 0644);
+		
+		$style_uri = plugin_dir_url(__FILE__) . 'css/mce_modify.css';
+		
+		if (empty($jwl_tmce_modifications['content_css'])) {
+			$jwl_tmce_modifications['content_css'] = $style_uri;
+		} else {
+			$jwl_tmce_modifications['content_css'] .= ','.$style_uri;
+		}
+		
+		return $jwl_tmce_modifications;
+	}
+	add_filter('tiny_mce_before_init', 'jwl_modify_tmce');
+}
+
+// Function to make directory for Image Manager files
+/*
+function jwl_create_imgmgr_direct() {
+	
+	$current_user = get_current_user_id();
+	
+	$target1 = WP_CONTENT_DIR.'/uploads/ultimate-tinymce';
+	$target2 = WP_CONTENT_DIR.'/uploads/ultimate-tinymce/imgmgr';
+	$target3 = WP_CONTENT_DIR.'/uploads/ultimate-tinymce/imgmgr/'.$current_user.'/images';
+	$target4 = WP_CONTENT_DIR.'/uploads/ultimate-tinymce/imgmgr/'.$current_user.'/files';
+	
+	
+	$target5 = WP_CONTENT_DIR.'/uploads/ultimate-tinymce/advimg';
+	
+	wp_mkdir_p( $target1 );
+	wp_mkdir_p( $target2 );
+	wp_mkdir_p( $target3 );
+	wp_mkdir_p( $target4 );
+	
+	wp_mkdir_p( $target5 );
+}
+add_action('plugins_loaded','jwl_create_imgmgr_direct');
+*/
 
 ?>

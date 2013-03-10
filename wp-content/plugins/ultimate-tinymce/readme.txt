@@ -1,16 +1,16 @@
 === Ultimate TinyMCE ===
-Contributors: josh401 
+Contributors: josh401, Marventus
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A9E5VNRBMVBCS
 Tags: tinymce, editor, buttons, button, add, cut, copy, paste, font, font style, font select, font color, table, tables, visual editor, emoticons, emotions, smilies, smiley, smily, search, replace, colors, color, anchor, advance, advanced, links, link, popup, javascript, upgrade, update, admin, image, images, citations, preview, html, custom, custom css, css, borders, pages, posts, pretty, colorful, moods, animated smilieswidget, php, php widget, shortcode, shortcodes, style, styles, plugin, login, excerpt, id, post, page, youtube, syntax, highlight, highlighter, image maps
 Requires at least: 3.3.1
-Tested up to: 3.5
-Stable tag: 3.1
+Tested up to: 3.6
+Stable tag: 4.0.7
 
 Description: Beef up your visual tinymce editor with a plethora of advanced options.
 
 == Description ==
 
-<a href="http://www.plugins.joshlobe.com/ultimate-tinymce-pro/">GO PRO!!</a>  Be sure to check out <a href="http://www.plugins.joshlobe.com/ultimate-tinymce-pro/">Ultimate Tinymce PRO</a>.  Offering more advanced features, additional formatting options, and an easier admin interface; <a href="http://www.plugins.joshlobe.com/ultimate-tinymce-pro/">Ultimate Tinymce PRO</a> is the final solution for the ultimate WordPress visual editor.
+<a href="http://www.plugins.joshlobe.com/">GO PRO!!</a>  Be sure to check out <a href="http://www.plugins.joshlobe.com/">Ultimate Tinymce PRO</a>.  Offering more advanced features, additional formatting options, and an easier admin interface; <a href="http://ultimatetinymcepro.com">Ultimate Tinymce PRO</a> is the final solution for the ultimate WordPress visual editor.
 
 Are you a visual person?  Do the letter combinations "HTML" and "CSS" send you running for the hills; but you still want to create beautiful blogs like the pros?  Then this is the plugin for you!
 
@@ -74,6 +74,8 @@ If you like this plugin, <strong>Please Leave A Rating</strong>.  Also, click "W
 <strong>Translations:</strong><br />
 Translating a plugin takes a lot of time, effort, and patience.  Especially with a plugin like Ultimate TinyMCE where there is a large admin panel options page with lots of text.  I really appreciate the hard work from these contributors.<br />
 <ul>
+<li>Russian:    Svetlana                - <a href="http://yashopper.info">http://yashopper.info</a></li>
+<li>Irish:      Vikas                   - <a href="http://www.wiznicworld.com">http://www.wiznicworld.com</a></li>
 <li>French:     Quentin                 - <a href="www.tradpress.fr">www.tradpress.fr</a></li>
 <li>Czech:      Pavel Bilek     	- <a href="http://chcistranky.eu/zdarma/">Chcistranky.eu</a></li>
 <li>Hindi:      Outshine SOlutions      - <a href="http://outshinesolutions.com/">Outshine Solutions</a></li>
@@ -83,6 +85,7 @@ Translating a plugin takes a lot of time, effort, and patience.  Especially with
 <li>Japanese:   Redcocker       	- <a href="http://www.near-mint.com/blog/">http://www.near-mint.com/blog/</a></li>
 <li>Dutch:      keesiemeijer    	- <a href="http://codex.wordpress.org/User:Keesiemeijer">http://codex.wordpress.org/User:Keesiemeijer</a></li>
 <li>Finnish:    markku</li>
+<li>Portuguese: Valdir Trombini</li>
 </ul>
 
 
@@ -145,6 +148,178 @@ Please use my <a href="http://forum.joshlobe.com/member.php?action=register&refe
 
 == Changelog ==
 
+= 4.0.7 =
+* 02-03-2013
+
+= Bug Fixes =
+* Fixed "Session Start" Errors. Also fixed "Headers already sent" errors. Seriously, this time. 
+
+= 4.0.6 =
+* 02-02-2013
+
+= Bug Fixes =
+* Fixed "Session Start" Errors. I consider this a critical update. 
+
+= 4.0.5 =
+* 01-22-2013
+
+= Tweaks =
+* Added option to completely disable all plugin author styling.  This will give the plugin admin settings page a very "vanilla" WordPress feel.  All tabs, sidebar information, plugins listing styles, scroll to top button, etc. will be removed.  This option can be found in the "Admin Options" of the settings page.
+
+= 4.0.4 =
+* 01-17-2013
+
+= Bug Fixes =
+* Fixed Advanced Insert/Edit link button.
+* Fixed Clear Div buttons.
+* Fixed NextPage button.
+
+= Tweaks =
+* Moved the above mentioned three buttons out of the "Misc Features" section and into the "Buttons Group 2" section.
+* If these buttons were active... they will need to be re-activated after the upgrade process.
+
+= 4.0.3 =
+* 01-08-2013
+
+= Bug Fixes =
+* Fixed IE errors with "uncaught" and "undefined" errors.  This was preventing the plugin from functioning properly in Internet Explorer browsers.
+* Fixed IE errors with the p and br quicktags.
+
+= 4.0.2 =
+* 01-06-2013
+
+= Bug Fixes =
+* Fixed problem with IE8 and editor not displaying properly.
+
+= 4.0.1 =
+* 01-02-13
+
+= Tweaks =
+* Re-activated the forced opening of the kitchen sink button.  This button's original functionality is to expand/collapse row 2 of the visual editor.  Now, the kitchen sink will always be forced to it's open state.  There is an option to disable this feature, and restore original WP kitchen sink button functionality.
+* Changed version numbering system.
+
+= 3.9 =
+* 12-23-2012
+
+= New Features =
+* Are you ready for this???
+* Added two new addons.  One for working with paragraph tags... and one to insert linebreaks.
+* Oh... it gets BETTER!!
+* These new p and br tags will NOT... I repeat... will NOT be stripped out by the editor.
+* They will be preserved both when saving a post... and when switching between "visual" and "text" editors.
+
+= Tweaks =
+* Updated Japanese language translation.  Thanks Takuro Hishikawa!
+* Added some code for BBPress compatibility (unsets "teeny" mode in bbpress).
+
+* Adjusted tinymce file to use WP's version.  This means, there will no longer be incompatibility should WP choose to change the file again.
+* Because of the item above; all addon files had to be changed from .html to .php.  VERY labor intensive.. so please report any errors.
+
+= 3.8 =
+* 12-12-12
+
+= Tweaks =
+* Made a few adjustments and fixes to be 3.5 compliant.
+
+= 3.7 =
+* 12-03-2012
+
+= New Features =
+* Added "scroll to top of page" arrow on bottom left of admin settings page.  Click to be taken back to top of page.
+
+= Bug Fixes =
+* Fixed bug with admin colors option not saving.
+* Fixed error with "change_mce_css.xxx" console warning when a color has not been selected for the admin colors.
+
+= Tweaks =
+* Fixed default QR Content text color from white.. to black (white on white was hard to see ;).
+* Updated links to Ultimate Tinymce PRO.
+* Consolidated a few of the CSS files into one, to enhance page loading times.
+* Consolidated ALL of the javascript functions into a single file.. and loaded it from outside the main plugin file.
+* Removed the 'set screen columns' from the "Screen Options" tab, since it's no longer needed.
+
+= Language Updates =
+* Updated "Russian" language file.  Thanks <a href="http://yashopper.info">Svetlana</a>!!
+* Updated "Irish" language file.  Thanks <a href="http://www.wiznicworld.com">Vikas</a>!!
+
+= 3.6 =
+* 11-11-2012
+
+= IMPORTANT =
+* I had to remove the Image Manager.  There is an exploit in the file swfulpoad.swf which can cause a security issue.  I was contacted by WordPress and asked to remove this security issue.  So, I am working on a new version which does not use the file.  I do apologize.. but some things are beyond my control.
+* You may read more about the threat, <a href="http://seclists.org/fulldisclosure/2012/Nov/51">HERE</a>.
+
+= Bug Fixes =
+* Fixed Image Map feature to properly load image in webkit browsers.
+
+= 3.5 =
+* 11-04-2012
+
+= Bug Fixes =
+* Fixed bug with wpautop not being disabled inside the content editor.
+* Fixed bug on "save editor scrollbar position".  This now works properly.
+* Worked on bugs in new Image Manager.  Fixed "function split()" error... and "jpeg not supported" error.
+
+= Tweaks =
+* Fixed admin notice so that it only appears on plugin settings page.
+* Removed some extraneous lines of code and a few un-needed files.
+* Fixed QR code editor (in admin panel) "pushing" alignment when option is enabled.
+* Moved files around inside plugin folder to help with organization.  All plugin addons are now stored in the.. are you ready.. "addons" folder.
+* Added "quick nav" links for quickly "jumping" to different metaboxes.
+
+* Completely re-coded main admin settings page sidebar.
+* Added notice to rate plugin (sidebar) using WP's new rating system.
+* Added a subscription button (sidebar) to receive plugin updates, news, and tutorials.
+
+* Re-coded Image Manager addon so that each user will have their own storage space.  This is configured automatically, depending on the users unique ID.  NOTE: If you have already uploaded images.. then they will not appear when you update.  So, if you don't know how to get them back, please contact me and I'll provide step-by-step instructions on how to get back your images.
+
+= Removed =
+* Developer recommendations section.  The plugin admin panel is getting too big and it was taking up space.  I will probably add a "tabbed" section in a future update.
+* Themefuse banner and link.
+
+= NOTES =
+* The image manager may require some adjustments depending on individual server configurations.  If this feature is not working for you, please visit my support forum where users are reporting various fixes.
+
+= 3.4 =
+* 10-23-2012
+
+= New Features =
+* Added sub-plugin which allows selectable text directions in the content editor.
+* Added new plugin for additional image manipulation (EZ Image Button).
+* Added new plugin for managing an entirely new image system (Advanced Image Manager).  This plugin will allow users to create unlimited directories and sub-directories for storing images, and inserting them quickly into the tinymce editor.  Please read the included help file for more information.
+
+= Tweaks =
+* Updated Japanese language file.
+* Re-worded the options under "Miscellaneous Settings".
+
+
+= 3.3 =
+* 10-14-2012
+
+= New Metabox Panel =
+* Added a new options panel for over-riding tinymce settings (Content Editor Tinymce Over-Rides).  This will allow you to choose a default background color, font color, etc. to use in the content editor.  Please read the included help file before using these options.
+* These options do nothing to the front-end of the website... they only modify the CSS used in the tinymce content editor.
+
+= New Features =
+* Added addon for checking web accessibility of html page.
+* Added addon for using Clker's open-source, free clip-art galleries.
+
+= Tweaks =
+* Fixed tinymce box used for shortcodes "shifting" content to the left of the metabox.
+* Fixed spacing of some admin boxes on certain screen resolutions.
+
+
+= 3.2 =
+* 10-01-2012
+
+= New Features =
+* Added buttons for encoding and decoding selected text.  (Buttons Group 1)
+
+= Tweaks =
+* Added class for QR box... so that it can be targeted via CSS.
+* Updated core files to be compatible with Tinymce 3.4.9 and WordPress 3.5.
+* Added Brazilian (Portuguese) language translation.  (Thanks <strong>Valdir Trombini</strong>)
+
 = 3.1 =
 * 08-30-2012
 
@@ -166,19 +341,19 @@ Please use my <a href="http://forum.joshlobe.com/member.php?action=register&refe
 * Removed tinymce comment editor.  (Loses focus when replying to comment)
 
 = Notes =
-* Added notice for Pro version signup, and an Affiliate Program link (dismissable).
+* Added notice for Pro version signup, and an Affiliate Program link.
 
 
 = 3.0 =
 * 08-09-2012
 
 = New Features =
-* <a href="http://www.plugins.joshlobe.com/ultimate-tinymce-pro/">Ultimate Tinymce PRO</a> is now available.  Get it today for an introductory price!
+* <a href="http://ultimatetinymcepro.com">Ultimate Tinymce PRO</a> is now available.  Get it today for an introductory price!
 
 = Tweaks =
 * Reduced QR Code image from 100x100px to 75x75px.  This reduces screen "real-estate", while still allowing smart devices to recognize the code.
 * Changed "Signoff" textbox to an Ultimate Tinymce textbox.
-* Added link and info box for <a href="http://www.plugins.joshlobe.com/ultimate-tinymce-pro/">Ultimate Tinymce PRO</a>.
+* Added link and info box for <a href="http://ultimatetinymcepro.com">Ultimate Tinymce PRO</a>.
 
 = Bug Fixes =
 * Fixed warning message if plugin is installed in a subdirectory.

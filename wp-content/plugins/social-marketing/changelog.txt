@@ -1,0 +1,50 @@
+Plugin Name: Social Marketing
+Author: Ve Bailovity (Incsub)
+
+Change Log:
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+1.2.1 - 2012-11-15
+----------------------------------------------------------------------
+- Added `forced` shortcode parameter.
+- Layout stylesheet fixes.
+- Rebinding the injection hooks.
+- Exposed more strings for l10n.
+
+1.2 - 2012-10-25
+----------------------------------------------------------------------
+- Allowing shortcodes in "Thank you" text and in response results.
+- Added lazy dependency injection options.
+- Shifted responsibilities for dependencies loading.
+- Exposed share text and result for filtering on successful share.
+
+1.1.2 - 2012-02-20
+----------------------------------------------------------------------
+- Proper class inclusion shielding.
+
+1.1.1 - 2012-02-02
+----------------------------------------------------------------------
+- Fix for widget rendering.
+- Added filterable supported items.
+
+1.1 - 2012-01-22
+----------------------------------------------------------------------
+- Fix for apostrophe escaping issue.
+- Added help tip popups.
+- UI updates.
+- Better popup.
+
+1.0.1 - 2012-01-12
+----------------------------------------------------------------------
+- Fixed more help links.
+
+1.0 - 2012-01-10
+----------------------------------------------------------------------
+- Initial stable release
+
+0.1 - 2011-10-06
+----------------------------------------------------------------------
+- Initial Beta release
+
+144460-1360119677
