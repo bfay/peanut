@@ -1349,9 +1349,9 @@ Thanks again!", 'mp')
     $nav = substr($list, 0, $break);
 
     if ( !$this->get_setting('disable_cart') ) {
-      $nav .= '<ul class="children"><li class="page_item'. ((get_query_var('pagename') == 'product_list') ? ' current_page_item' : '') . '"><a href="' . mp_products_link(false, true) . '" title="' . __('Products', 'mp') . '">' . __('Products', 'mp') . '</a></li>';
+      /*$nav .= '<ul class="children"><li class="page_item'. ((get_query_var('pagename') == 'product_list') ? ' current_page_item' : '') . '"><a href="' . mp_products_link(false, true) . '" title="' . __('Products', 'mp') . '">' . __('Products', 'mp') . '</a></li>';*/
 			$nav .= '<li class="page_item'. ((get_query_var('pagename') == 'cart') ? ' current_page_item' : '') . '"><a href="' . mp_cart_link(false, true) . '" title="' . __('Shopping Cart', 'mp') . '">' . __('Shopping Cart', 'mp') . '</a></li>';
-      $nav .= '<li class="page_item'. ((get_query_var('pagename') == 'orderstatus') ? ' current_page_item' : '') . '"><a href="' . mp_orderstatus_link(false, true) . '" title="' . __('Order Status', 'mp') . '">' . __('Order Status', 'mp') . '</a></li>
+      /*$nav .= '<li class="page_item'. ((get_query_var('pagename') == 'orderstatus') ? ' current_page_item' : '') . '"><a href="' . mp_orderstatus_link(false, true) . '" title="' . __('Order Status', 'mp') . '">' . __('Order Status', 'mp') . '</a></li>*/
 </ul>
 ';
     } else {
@@ -1501,7 +1501,7 @@ Thanks again!", 'mp')
     $content .= mp_buy_button(false, 'single');
     $content .= '</div>';
 
-		$content .= mp_category_list($post->ID, '<div class="mp_product_categories">' . __( 'Categorized in ', 'mp' ), ', ', '</div>');
+		//$content .= mp_category_list($post->ID, '<div class="mp_product_categories">' . __( 'Categorized in ', 'mp' ), ', ', '</div>');
 
     //$content .= mp_tag_list($post->ID, '<div class="mp_product_tags">', ', ', '</div>');
 
